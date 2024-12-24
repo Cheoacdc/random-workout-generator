@@ -1,0 +1,4 @@
+.min_no_wrap {
+    max-width: min-content;
+    white-space: nowrap;
+}
