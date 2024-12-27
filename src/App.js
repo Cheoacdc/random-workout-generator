@@ -2,10 +2,13 @@ import {
     QueryClient,
     QueryClientProvider,
 } from 'react-query'
-import { Home } from './pages/Home';
+import { NavbarLayout } from './components/layout';
+import { Home, Results, Splash } from './pages';
 import { ThemeProvider } from '@mui/material/styles';
 import { IntlProvider } from 'react-intl'
 import { useContext } from 'react';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { theme } from './themes/theme';
 
@@ -23,7 +26,16 @@ export default function App() {
                     defaultLocale={'es'}
                     messages={messages}
                 >
-                    <Home />
+                    <BrowserRouter>
+                        <Routes>
+                            <Route element={<NavbarLayout />}>
+                                <Route path="/home" element={<Home />} />
+                                <Route path="/results" element={<Results />} />
+                            </Route>
+
+                            <Route path="*" element={<Splash />} />
+                        </Routes>
+                    </BrowserRouter>
                 </IntlProvider>
             </ThemeProvider>
         </QueryClientProvider>
