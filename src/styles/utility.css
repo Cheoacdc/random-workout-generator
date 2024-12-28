@@ -2,3 +2,8 @@
     max-width: min-content;
     white-space: nowrap;
 }
+
+.unstyled_link {
+    text-decoration: none;
+    color: inherit;
+}

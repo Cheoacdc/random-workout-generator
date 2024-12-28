@@ -1,4 +1,8 @@
 {
     "change.theme": "Cambiar tema",
-    "message.language": "Idioma"
+    "message.language": "Idioma",
+    "button.get.started": "Comienza",
+    "button.generate.results": "Generar resultados",
+    "button.try.again": "Intentar de nuevo",
+    "button.go.back": "Regresar"
 }
